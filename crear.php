@@ -46,5 +46,6 @@ try
          <a class="volver" href="index.php">Volver Inicio</a>
        </div>
     </div>
+    <?php  $conn->close();?>
   </body>
 </html>

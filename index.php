@@ -3,6 +3,8 @@
 try
   {
     require_once("funciones/bd_conexion.php");
+    $sql = 'SELECT * FROM contactos';
+    $resultado = $conn->query($sql);
   }
   catch(Exception $e)
     {
@@ -39,5 +41,12 @@ try
           <input type="submit" value="Agregar">
         </form>
       </div>
+      <div class="contenido existentes">
+        <h2>Contactos Existentes</h2>
+        <p>
+          Número de contactos: <?php echo $resultado->num_rows;?>
+        </p>
+      </div>
+      <?php $conn->close();?>
   </body>
 </html>
