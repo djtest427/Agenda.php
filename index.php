@@ -46,7 +46,28 @@ try
         <p>
           Número de contactos: <?php echo $resultado->num_rows;?>
         </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Número</th>
+              <th>Editar</th>
+              <th>Borrar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php while($registros = $resultado->fetch_assoc() ) {?>
+              <tr >
+                <td><?php echo $registros['Nombre']; ?></td>
+                <td><?php echo $registros['Telefono']; ?></td>
+                <td><a href="editar.php?id=<?php echo $registros['id']; ?>">Editar</a></td>
+                <td ><a class="borrar" href="borrar.php?id=<?php echo $registros['borrar']; ?>">Borrar</a></td>
+              </tr>
+            <?php } ?>
+          </tbody>
+        </table>
       </div>
+    </div>
       <?php $conn->close();?>
   </body>
 </html>
