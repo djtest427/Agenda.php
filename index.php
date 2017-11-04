@@ -61,7 +61,7 @@ try
                 <td><?php echo $registros['Nombre']; ?></td>
                 <td><?php echo $registros['Telefono']; ?></td>
                 <td><a href="editar.php?id=<?php echo $registros['id']; ?>">Editar</a></td>
-                <td ><a class="borrar" href="borrar.php?id=<?php echo $registros['borrar']; ?>">Borrar</a></td>
+                <td ><a class="borrar" href="borrar.php?id=<?php echo $registros['id']; ?>">Borrar</a></td>
               </tr>
             <?php } ?>
           </tbody>
