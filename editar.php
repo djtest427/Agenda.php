@@ -38,16 +38,16 @@ try
         <?php while($registro = $resultado->fetch_assoc() ) { ?>
           <div class="campo">
             <label for="nombre">Nombre</label>
-            <input type="text" value="<?php echo $registro['Nombre']; ?>" name="nombre" id="nombre" placeholder="Nombre">
+            <input type="text" value="<?php echo $registro["Nombre"]; ?>" name="nombre" id="nombre" placeholder="Nombre">
           </div>
           <div class="campo">
             <label for="numero">Numero</label>
-            <input type="text" value="<?php echo $registro['Telefono']; ?>" name="numero" id="numero" placeholder="Numero Telefonico">
+            <input type="text" value="<?php echo $registro["Telefono"]; ?>" name="numero" id="numero" placeholder="Numero Telefonico">
           </div>
-        <?php } ?>
           <input type="hidden" name="id" value="<?php echo $registro['id']; ?>">
-          <input type="submit" value="Modificar">
+          <input type="submit" value="Actualizar">
           <a class="volver" href="index.php">Volver Inicio</a>
+        <?php } ?>
         </form>
       </div>
     </div>
